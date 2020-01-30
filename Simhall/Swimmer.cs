@@ -11,15 +11,25 @@ namespace Simhall
         private string name;
 
         private BathingSuit suit;
-
-        public string Swim()
+        
+        public Swimmer(string name)
         {
-            return "Splish Splash - it's so fun in the bath!";
+            this.name = name;
         }
 
-        public void SetSuit(BathingSuit)
+        public Swimmer(string name, BathingSuit bathingsuit)
         {
+            this.name = name;
+        }
 
+        public virtual void Swim()
+        {
+            Console.WriteLine("Splish Splash - it's so fun in the bath!");
+        }
+
+        public virtual void SetSuit(BathingSuit bs)
+        {
+            this.suit = bs;
         }
     }
 }
